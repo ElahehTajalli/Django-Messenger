@@ -1,0 +1,27 @@
+ 
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1> LOGIN </h1>
+        <form action="" method="POST">
+            {% csrf_token %} 
+
+            Username: <br/>
+
+            <input type="text" name="username">
+            <br/>
+            Password: <br/>
+            <input type="password" name="password">
+            <br />
+            <br/>
+            <input type="submit" value="LOGIN">
+        </form>
+        {% if error %}
+        <p>
+            {{error}}
+        </p>
+        {% endif %}
+    </body>
+</html>
